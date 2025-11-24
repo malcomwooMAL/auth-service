@@ -79,6 +79,6 @@ public class AuthController {
 
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
 
-        return restTemplate.exchange("http://localhost:8080/oauth2/token", HttpMethod.POST, request, String.class);
+        return restTemplate.exchange("http://localhost:9000/oauth2/token", HttpMethod.POST, request, String.class);
     }
 }

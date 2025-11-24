@@ -51,13 +51,13 @@ ou
 mvn spring-boot:run
 ```
 
-A aplicação estará acessível em `http://localhost:8080`.
+A aplicação estará acessível em `http://localhost:9000`.
 
 ## Documentação da API (Swagger UI)
 
 Após iniciar a aplicação, você pode acessar a documentação interativa da API através do Swagger UI:
 
-👉 **[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)**
+👉 **[http://localhost:9000/swagger-ui.html](http://localhost:9000/swagger-ui.html)**
 
 Lá você encontrará detalhes sobre todos os endpoints, esquemas de dados e poderá testar as requisições diretamente pelo navegador.
 
@@ -72,7 +72,7 @@ Endpoint para criar um novo usuário no sistema.
 **Requisição:**
 
 ```bash
-curl -X POST http://localhost:8080/api/auth/registrar \
+curl -X POST http://localhost:9000/api/auth/registrar \
   -H "Content-Type: application/json" \
   -d '{
     "username": "meu_usuario",
@@ -92,7 +92,7 @@ O endpoint `/api/auth/login` foi criado para simplificar o processo de login par
 **Requisição:**
 
 ```bash
-curl -X POST http://localhost:8080/api/auth/login \
+curl -X POST http://localhost:9000/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{
     "username": "meu_usuario",
