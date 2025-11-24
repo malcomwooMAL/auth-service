@@ -7,17 +7,30 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.Column;
 
+/**
+ * Entidade que representa um usuário no sistema.
+ * Mapeada para a tabela "users" no banco de dados.
+ */
 @Entity
 @Table(name = "users")
 public class User {
 
+    /**
+     * Identificador único do usuário.
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    /**
+     * Nome de usuário, deve ser único.
+     */
     @Column(unique = true, nullable = false)
     private String username;
 
+    /**
+     * Senha criptografada do usuário.
+     */
     @Column(nullable = false)
     private String password;
 
