@@ -96,6 +96,6 @@ public class SecurityConfig {
     public OpaqueTokenIntrospector introspector() {
         // A implementação padrão usa as credenciais "client" e "secret" que configuramos.
         // E o endpoint de introspecção é http://localhost:8080/oauth2/introspect
-        return new NimbusOpaqueTokenIntrospector("http://localhost:8080/oauth2/introspect", "client", "secret");
+        return new NimbusOpaqueTokenIntrospector("http://localhost:9000/oauth2/introspect", "client", "secret");
     }
 }
