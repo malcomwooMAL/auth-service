@@ -6,6 +6,9 @@ import com.example.authservice.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+/**
+ * Serviço responsável pela lógica de negócios relacionada à autenticação e gerenciamento de usuários.
+ */
 @Service
 public class AuthService {
 
@@ -17,6 +20,13 @@ public class AuthService {
         this.passwordEncoder = passwordEncoder;
     }
 
+    /**
+     * Registra um novo usuário no sistema.
+     * A senha fornecida é criptografada antes de ser salva.
+     *
+     * @param userDto Objeto contendo os dados do usuário (username e password).
+     * @return O usuário registrado.
+     */
     public User registerNewUser(UserDto userDto) {
         User user = new User();
         user.setUsername(userDto.getUsername());
